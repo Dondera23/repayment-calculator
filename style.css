@@ -8,3 +8,23 @@ body{
   height: 10px;
   width: 200px;
 }
+
+.input {
+  border: 1px solid hsl(200, 26%, 54%);
+  width: 250px;
+  width: 40px;
+}
+span{
+  background-color: hsl(202, 86%, 94%);
+  color:hsl(200, 24%, 40%);
+}
+.input span {
+  display: flex;
+}
+
+.rad{
+  display: block;
+  border: 1px solid hsl(200, 26%, 54%);
+  width: 250px;
+  width: 40px;
+}
