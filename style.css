@@ -1,5 +1,10 @@
 .attribution { font-size: 0.6875rem; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 body{
-  background-color: hsl(0, 52%, 57%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.rad{
+  height: 10px;
+  width: 200px;
 }
