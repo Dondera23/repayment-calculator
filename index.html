@@ -7,8 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Mortgage repayment calculator</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <link href="./style.css" rel="stylesheet">
   <script src="./index.js" charset="utf-8" defer></script>
 </head>
@@ -40,28 +41,32 @@
       </div>
       <div class="input4">
         <h4>Mortgage Type</h4>
-        <button class="rad"><input type="radio">Repayment</button>
-        <button class="rad"><input type="radio">Interest Only</button>
+        <button type="button" class="rad" data-value="repayment">
+          <input type="radio" name="mortage-type" value="repayment"id="repayment">Repayment
+        </button>
+        <button type="button" class="rad" data-value="interest-only">
+          <input type="radio" name="mortage-type" value="interest-only" id="interest-only">Interest Only
+        </button>
       </div>
-      <div>
-        <button>
-          <img src="./assets/images/icon-calculator.svg">
+      <div class="calbutton">
+        <button type="button" data-value="calculate-payment" class="calculate">
+          <img src="./assets/images/icon-calculator.svg" id="cal-icon">
           <span>Calculate Repayments</span>
         </button>
       </div>
     </div>
-    <div class="bottomcontainer">
-
+    <div class="bottomcard">
+      <img src="./assets/images/illustration-empty.svg" class="bottom-pic">
+      <h4 class="result">Results shown here</h4>
+      <p class="emptytext">
+        Complete the form and click “calculate repayments” to see what your monthly repayments would be.
+      </p>
     </div>
 
 
 
     <!-- Empty results start -->
-
-    Results shown here
-
-    Complete the form and click “calculate repayments” to see what 
-    your monthly repayments would be.
+    
 
     <!-- Empty results end -->
 
@@ -80,7 +85,7 @@
   </div>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Divine Chidera</a>.
   </footer>
 </body>
 </html>

@@ -2,6 +2,8 @@
 .attribution a { color: hsl(228, 45%, 44%); }
 body{
   background-color: hsl(0, 0%, 100%);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-style: normal; 
 }
 
 .container{
@@ -9,16 +11,19 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid salmon;
+  /* border: 1px solid salmon; */
 }
 
+/*FORM SECTION STYLING */
 .topcard{
-  border: 1px solid gold;
+  /* border: 1px solid gold; */
   width: 90%;
 }
-
+.input {
+  margin: 33px 0;
+}
 .input-wrapper {
-  width: 280px;
+  width: 309px;
   position: relative;
   /* background-color: red; */
 }
@@ -27,26 +32,37 @@ body{
 /*INPUT */
 .input-wrapper .inp{
   width: 100%;
-  height: 42px;
+  height: 50px;
   padding: 10px;
-  border: 2px solid hsl(200, 26%, 54%);
+  border: 1.1px solid hsl(200, 26%, 54%);
   border-radius: 5px;
   box-sizing: border-box;
   background-color: hsl(0, 0%, 100%);
+  outline: none;
+  transition: none;
+}
+
+/*keep border exactly the same as focus */
+.input-wrapper .inp:focus {
+  border: 1.1px solid hsl(200, 26%, 54%);
+  box-shadow: none;
+  outline: none;
 }
 
 /* LEFT ICON (₤) */
 .sp.left{
   position: absolute;
-  left: 1.7px;
-  top:1.95px;
-  height: 38px;
+  left: 1.4px;
+  top:1.2px;
+  height: 47.8px;
   width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 3.1px 0 0 3.1px;
   background-color: hsl(202, 86%, 94%);
+  color: hsl(202, 55%, 16%);
+  font-weight: 700;
 }
 
 /* pushing  input text away from £ */
@@ -57,15 +73,17 @@ body{
 /* RIGHT ICON (years, %)*/
 .sp.right {
   position: absolute;
-  right: 1.7px;
-  top: 1.95px;
-  height: 38px;
+  right: 1.4px;
+  top: 1.2px;
+  height: 47.8px;
   width: 60px; 
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: hsl(202, 86%, 94%);
   border-radius: 0 3.1px 3.1px 0;
+  color: hsl(202, 55%, 16%);
+  font-weight: 700;
 }
 
 /* push input text away from right span */
@@ -73,15 +91,134 @@ body{
   padding-right: 70px;
 }
 
+/*The percentage background width */
 #per {
   width: 40px;
 }
 
+/*The button and radio button section */
 .rad{
-  display: block;
   border: 1px solid hsl(200, 26%, 54%);
   width: 250px;
   height: 40px;
   text-align: left;
   border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+  width: 309px;
+  margin: 15px 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: hsl(202, 55%, 16%);
+  font-weight: 700;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rad:hover {
+  border-color: hsl(202, 55%, 16%);
+}
+
+/*Selected state */
+.rad.selected {
+  background-color: hsla(61, 70%, 52%, 0.5);
+  border-color: hsl(61, 70%, 52%);
+}
+
+input[type="radio"] {
+  /* Removes default browser styling */
+  appearance: none;
+  -webkit-appearance: none;
+  
+  /* Sets custom size */
+  width: 16px;
+  height: 16px;
+  margin-right: 15px;
+  cursor: pointer;
+  flex-shrink: 0;
+  
+  /* Re-creates the circular look */
+  border: 2px solid hsl(202, 55%, 16%);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Style for when the radio is selected */
+input[type="radio"]:checked {
+  background-color: hsl(61, 70%, 52%);
+  border: 5px solid #fff; /* Creates a "donut" effect */
+  box-shadow: 0 0 0 2px hsl(61, 70%, 52%);
+}
+
+h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-style: normal;
+  color: hsl(202, 55%, 16%);
+}
+
+h4 {
+  color: hsl(200, 24%, 40%);
+  font-weight: 600;
+  font-size: 1rem;
+}
+#clear {
+  color: hsl(200, 24%, 40%);
+  font-weight: 600;
+}
+
+/*The calculation button styling */
+.calculate{
+  width: 309px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-style: none;
+  font-size: 0.98rem;
+  gap:12px;
+  color: hsl(202, 55%, 16%);
+  font-weight: 700;
+  border-radius: 50px;
+  background-color: hsl(61, 70%, 52%);
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+#cal-icon {
+  width: 25px;
+}
+
+/*THE BOTTOM SECTION*/
+.bottomcard{
+  background-color: hsl(202, 55%, 16%);
+  border: 1px solid gold;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 5px;
+}
+
+.bottom-pic {
+  margin-top: 10px;
+}
+.emptytext{
+  text-align: center;
+  color: hsl(203, 41%, 72%);
+  font-weight: 500;
+}
+
+.result {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 4px;
 }
